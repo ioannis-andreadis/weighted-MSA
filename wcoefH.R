@@ -2,7 +2,6 @@
 wcoefH<-function(completedata, completeweight) {
 X<-as.matrix(completedata)
 X<-X-min(X)
-completeweight<-chile$pond[complete.cases(data)]
 Sw<-cov.wt(X,completeweight)$cov
 Smaxw <- cov.wt(apply(X, 2, sort),completeweight)$cov
 Hijw <- Sw/Smaxw
